@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.CheckBox
+import android.widget.ImageView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -16,81 +17,45 @@ class MainActivity : AppCompatActivity() {
     fun onCheckboxClicked(view: View) {
         view as CheckBox
         if (hatCheckBox == view) {
-            if (view.isChecked) {
-                hatPic.visibility = View.VISIBLE
-            } else {
-                hatPic.visibility = View.INVISIBLE
-            }
+            toggleVisibility(hatCheckBox, hatPic)
         }
         if (eyesCheckBox == view) {
-            if (view.isChecked) {
-                eyePic.visibility = View.VISIBLE
-            } else {
-                eyePic.visibility = View.INVISIBLE
-            }
+            toggleVisibility(eyesCheckBox,eyePic)
         }
         if (eyebrowsCheckBox == view) {
-            if (view.isChecked) {
-                eyebrowPic.visibility = View.VISIBLE
-            } else {
-                eyebrowPic.visibility = View.INVISIBLE
-            }
+            toggleVisibility(eyebrowsCheckBox,eyebrowPic)
         }
         if (mustacheCheckBox == view) {
-            if (view.isChecked) {
-                mustachePic.visibility = View.VISIBLE
-            } else {
-                mustachePic.visibility = View.INVISIBLE
-            }
+            toggleVisibility(mustacheCheckBox, mustachePic)
         }
         if (mouthCheckBox == view) {
-            if (view.isChecked) {
-                mouthPic.visibility = View.VISIBLE
-            } else {
-                mouthPic.visibility = View.INVISIBLE
-            }
+            toggleVisibility(mouthCheckBox,mouthPic)
         }
         if (shoesCheckBoxes == view) {
-            if (view.isChecked) {
-                shoePic.visibility = View.VISIBLE
-            } else {
-                shoePic.visibility = View.INVISIBLE
-            }
+            toggleVisibility(shoesCheckBoxes,shoePic)
         }
         if (hatCheckBox == view) {
-            if (view.isChecked) {
-                hatPic.visibility = View.VISIBLE
-            } else {
-                hatPic.visibility = View.INVISIBLE
-            }
+            toggleVisibility(hatCheckBox,hatPic)
         }
         if (earsCheckBox == view) {
-            if (view.isChecked) {
-                earPic.visibility = View.VISIBLE
-            } else {
-                earPic.visibility = View.INVISIBLE
-            }
+            toggleVisibility(earsCheckBox,earPic)
         }
         if (noseCheckBox == view) {
-            if (view.isChecked) {
-                nosePic.visibility = View.VISIBLE
-            } else {
-                nosePic.visibility = View.INVISIBLE
-            }
+            toggleVisibility(noseCheckBox,nosePic)
         }
         if (glassesCheckBox == view) {
-            if (view.isChecked) {
-                glassesPic.visibility = View.VISIBLE
-            } else {
-                glassesPic.visibility = View.INVISIBLE
-            }
+            toggleVisibility(glassesCheckBox,glassesPic)
         }
         if (armsCheckBox == view) {
-            if (view.isChecked) {
-                armPic.visibility = View.VISIBLE
-            } else {
-                armPic.visibility = View.INVISIBLE
-            }
+            toggleVisibility(armsCheckBox,armPic)
+        }
+    }
+    private fun toggleVisibility(box: View, img: ImageView){
+        box as CheckBox
+        if(box.isChecked) {
+            img.visibility = View.VISIBLE
+        }else{
+            img.visibility = View.INVISIBLE
         }
     }
     }
