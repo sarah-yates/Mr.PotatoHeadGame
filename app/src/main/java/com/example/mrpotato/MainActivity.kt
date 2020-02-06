@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.CheckBox
-import androidx.core.view.isVisible
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -14,38 +13,85 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
     }
-    fun onCheckboxClicked(view: View){
-        var checked = view as CheckBox
-        if(hatCheckBox == checked) {
-            hatPic.visibility = View.VISIBLE
+    fun onCheckboxClicked(view: View) {
+        view as CheckBox
+        if (hatCheckBox == view) {
+            if (view.isChecked) {
+                hatPic.visibility = View.VISIBLE
+            } else {
+                hatPic.visibility = View.INVISIBLE
+            }
         }
-        if(eyesCheckBox == checked) {
-            eyePic.visibility = View.VISIBLE
+        if (eyesCheckBox == view) {
+            if (view.isChecked) {
+                eyePic.visibility = View.VISIBLE
+            } else {
+                eyePic.visibility = View.INVISIBLE
+            }
         }
-        if(eyebrowsCheckBox == checked) {
-            eyebrowPic.visibility = View.VISIBLE
+        if (eyebrowsCheckBox == view) {
+            if (view.isChecked) {
+                eyebrowPic.visibility = View.VISIBLE
+            } else {
+                eyebrowPic.visibility = View.INVISIBLE
+            }
         }
-        if(glassesCheckBox == checked) {
-            glassesPic.visibility = View.VISIBLE
+        if (mustacheCheckBox == view) {
+            if (view.isChecked) {
+                mustachePic.visibility = View.VISIBLE
+            } else {
+                mustachePic.visibility = View.INVISIBLE
+            }
         }
-        if(noseCheckBox == checked) {
-            nosePic.visibility = View.VISIBLE
+        if (mouthCheckBox == view) {
+            if (view.isChecked) {
+                mouthPic.visibility = View.VISIBLE
+            } else {
+                mouthPic.visibility = View.INVISIBLE
+            }
         }
-        if(mouthCheckBox == checked) {
-            mouthPic.visibility = View.VISIBLE
+        if (shoesCheckBoxes == view) {
+            if (view.isChecked) {
+                shoePic.visibility = View.VISIBLE
+            } else {
+                shoePic.visibility = View.INVISIBLE
+            }
         }
-        if(mustacheCheckBox == checked) {
-            mustachePic.visibility = View.VISIBLE
+        if (hatCheckBox == view) {
+            if (view.isChecked) {
+                hatPic.visibility = View.VISIBLE
+            } else {
+                hatPic.visibility = View.INVISIBLE
+            }
         }
-        if(earsCheckBox == checked) {
-            earPic.visibility = View.VISIBLE
+        if (earsCheckBox == view) {
+            if (view.isChecked) {
+                earPic.visibility = View.VISIBLE
+            } else {
+                earPic.visibility = View.INVISIBLE
+            }
         }
-        if(armsCheckBox == checked) {
-            armPic.visibility = View.VISIBLE
+        if (noseCheckBox == view) {
+            if (view.isChecked) {
+                nosePic.visibility = View.VISIBLE
+            } else {
+                nosePic.visibility = View.INVISIBLE
+            }
         }
-        if(shoesCheckBoxes == checked) {
-            shoePic.visibility = View.VISIBLE
+        if (glassesCheckBox == view) {
+            if (view.isChecked) {
+                glassesPic.visibility = View.VISIBLE
+            } else {
+                glassesPic.visibility = View.INVISIBLE
+            }
         }
+        if (armsCheckBox == view) {
+            if (view.isChecked) {
+                armPic.visibility = View.VISIBLE
+            } else {
+                armPic.visibility = View.INVISIBLE
+            }
         }
+    }
     }
 
